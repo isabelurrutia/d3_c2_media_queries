@@ -1,0 +1,129 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Karla", sans-serif;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #4d6267;
+    height: 12vh;
+}
+header{
+    grid-area: header;
+    background-color: #cbe1e7;
+    height: 15vh;
+}
+main{
+    grid-area: main;
+    background-color: #ffffff;
+    height: 60vh;
+}
+footer{
+    grid-area: footer;
+    background-color: #34484d;
+    height: 13vh;
+}
+.layout{
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;;
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+.nav_elementos{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    list-style-type: none;
+    color: #ffffff;
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: italic;
+}
+.icono_espacio{
+    padding-right: 15px;
+}
+.header_elementos{
+    padding: 25px;
+    text-align: center;
+    color:#4d6267;
+    font-size: medium;
+}
+#selector{
+    display: block;
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    margin-left: 70px;
+    margin-top: 10px;
+    font-size: medium;
+    color: #4d6267;
+}
+
+.main_tarjeta{
+    /*border: 1px solid green;*/
+    height: 53vh;
+    margin-top: 20px;
+}
+.tarjeta{
+    width: 80%;
+    height: 420px;
+    margin: 0 auto;
+    border: 1px solid #f3f5eb;
+    text-align: center;
+    box-shadow: 0px 5px 5px 0px rgba(116,121,109,1);
+    font-size: medium;
+}
+.tarjeta p {
+    font-size: small;
+}
+
+.img_auto{
+    width: 70%;
+    /*border: 1px solid blue;*/
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.boton{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #cbe1e7;
+    padding: 10px;
+    border-radius: 5px;
+    color: #4d6267;
+    font-size: small;
+}
+/*estilos navegador*/
+.main_navegacion{
+    height: 4vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #34484d;
+    font-size: large;
+}
+.main_navegacion div{
+    width: 5%;
+    border: 1px solid #e7e9df;
+    text-align: center;
+}
+
+.footer_elementos{
+    padding: 25px;
+    text-align: center;
+    color:#ffffff;
+    font-size: medium;
+}
+.iconos_footer{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
