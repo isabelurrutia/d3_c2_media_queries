@@ -6,8 +6,10 @@
     font-family: "Karla", sans-serif;
 }
 
-nav{
-    grid-area: nav;
+/***VERSIÓN MOBILE HASTA 576PX INCLUSIVE***/
+/*DISEÑOS LAYOUT*/
+aside{
+    grid-area: aside;
     background-color: #4d6267;
     height: 70px;
 }
@@ -20,22 +22,28 @@ main{
     grid-area: main;
     background-color: #ffffff;
 }
+nav{
+    grid-area: nav;
+    background-color: #ffffff;
+    height: 20px;
+}
 footer{
     grid-area: footer;
     background-color: #34484d;
     height: 55px;
 }
 .layout{
-    width: 100%;
-    margin: 0 auto;;
     display: grid;
     grid-template-areas: 
-    "nav"
+    "aside"
     "header"
     "main"
+    "nav"
     "footer";
 }
-.nav_elementos{
+
+/*DISEÑOS NAV*/
+.nav_items{
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -48,7 +56,9 @@ footer{
 #icono_espacio{
     padding-right: 15px;
 }
-.header_elementos{
+
+/*DISEÑOS HEADER*/
+.header_items{
     padding: 10px;
     text-align: center;
     color:#4d6267;
@@ -65,12 +75,12 @@ footer{
     color: #4d6267;
 }
 
-.main_tarjeta{
-    /*border: 1px solid green;*/
+/*DISEÑOS MAIN*/
+.main_card{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.tarjeta{
+.card{
     width: 80%;
     height: 420px;
     margin: 0 auto;
@@ -79,18 +89,16 @@ footer{
     box-shadow: 0px 5px 5px 0px rgba(116,121,109,1);
     font-size: medium;
 }
-.tarjeta p {
+.card p {
     font-size: small;
     color: #34484d;
 }
-
-.img_auto{
+.img_car{
     width: 70%;
-    /*border: 1px solid blue;*/
     margin-bottom: 10px;
     margin-top: 20px;
 }
-.boton{
+button{
     margin-bottom: 10px;
     margin-top: 10px;
     background-color: #cbe1e7;
@@ -99,21 +107,24 @@ footer{
     color: #4d6267;
     font-size: small;
 }
-/*estilos navegador*/
-.main_navegacion{
+
+/*ESTILOS NAV*/
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
     color: #34484d;
     font-size: large;
+    margin-bottom: 10px;
 }
-.main_navegacion div{
+.menu_items{
     width: 5%;
     border: 1px solid #e7e9df;
     text-align: center;
 }
 
-.footer_elementos{
+/*ESTILOS FOOTER*/
+.footer_items{
     margin-top: 15px;
     padding-top: 15px;
     text-align: center;
@@ -124,4 +135,34 @@ footer{
     display: flex;
     justify-content: center;
     list-style-type: none;
+}
+
+/***VERSIÓN ESCRITORIO MAS DE 576PX***/
+@media (min-width: 577px) {
+    .layout{
+        display: grid;
+        grid-template-areas: 
+        "aside header"
+        "aside main"
+        "footer nav";
+    }
+    aside{
+        width: 30vw;
+        height: 600px;
+    }
+    header{
+        width: 70vw;
+    }
+    main{
+        width: 70vw;
+        height: 700px;
+    }
+    footer{
+        width: 30vw;
+        height: 200px;
+    }
+    nav{
+        width: 70vw;
+        height: 100px;
+    }
 }
