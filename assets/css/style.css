@@ -23,7 +23,6 @@ main{
     background-color: #ffffff;
 }
 nav{
-    grid-area: nav;
     background-color: #ffffff;
     height: 20px;
 }
@@ -33,17 +32,17 @@ footer{
     height: 55px;
 }
 .layout{
+    margin: 0 auto;
     display: grid;
     grid-template-areas: 
     "aside"
     "header"
     "main"
-    "nav"
     "footer";
 }
 
-/*DISEÑOS NAV*/
-.nav_items{
+/*DISEÑOS ASIDE*/
+.aside_title{
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -53,8 +52,11 @@ footer{
     font-weight: 500;
     font-style: italic;
 }
-#icono_espacio{
+#space, #space2{
     padding-right: 15px;
+}
+.aside_items{
+    display: none;
 }
 
 /*DISEÑOS HEADER*/
@@ -109,7 +111,7 @@ button{
 }
 
 /*ESTILOS NAV*/
-.menu {
+nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -117,7 +119,7 @@ button{
     font-size: large;
     margin-bottom: 10px;
 }
-.menu_items{
+.nav_items{
     width: 5%;
     border: 1px solid #e7e9df;
     text-align: center;
@@ -129,7 +131,7 @@ button{
     padding-top: 15px;
     text-align: center;
     color:#ffffff;
-    font-size: medium;
+    font-size: large;
 }
 .iconos_footer{
     display: flex;
@@ -140,29 +142,77 @@ button{
 /***VERSIÓN ESCRITORIO MAS DE 576PX***/
 @media (min-width: 577px) {
     .layout{
+        width: 1200px;
+        height: 800px;
         display: grid;
         grid-template-areas: 
         "aside header"
         "aside main"
-        "footer nav";
+        "footer main";
     }
     aside{
-        width: 30vw;
+        width: 250px;
         height: 600px;
     }
+    .aside_title{
+        font-size:x-large;
+    }
+    #hamburger{
+        display: none;
+    }
+    .aside_items{
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        color: #ffffff;
+        font-size: large;
+        padding-top: 15px;
+    }
+    .aside_items li{
+        padding-top: 15px;
+    }
     header{
-        width: 70vw;
+        width: 950px;
+        height: 80px;
     }
     main{
-        width: 70vw;
-        height: 700px;
+        width: 950px;
+        height: 610px;
+        padding-top: 20px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;   
+        position: relative;  
+        bottom: 20px; 
     }
-    footer{
-        width: 30vw;
-        height: 200px;
+    .main_card{
+        margin: 0px;
+        height: 250px;
+    }
+    .card{
+        width: 200px;
+        height: 250px;
+        margin: 0px;
     }
     nav{
-        width: 70vw;
-        height: 100px;
+        width: 950px;
+        height: 40px;
+        margin: 0;
+    }
+    .nav_items{
+        height: 40px;
+    }
+    footer{
+        width: 250px;
+        height: 105px;
+        position: relative;
+        bottom: 55px;
+    }
+    .footer_items{
+        margin: 0;
+    }
+    .footer_items p{
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
